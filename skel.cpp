@@ -3,5 +3,5 @@
 
 int main(){
   
-    reurn EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }

@@ -4,7 +4,7 @@
 
 int main() {
 
-    printf("the world is a vampire.\n");
+    printf("The World Is A Vampire.\n");
 
     return EXIT_SUCCESS;
 }
