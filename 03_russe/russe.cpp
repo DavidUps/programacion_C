@@ -11,19 +11,19 @@ int main(int argc, char *argv[]){
     //  Divide op2 / 2
     //  Duplica op1
     //Repetir si op2 > 0
-    
+
     int op1, o1,
         op2, o2,
         resultado = 0;
-        
+
     printf("Operando 1: ");
     scanf(" %i", &op1);
     o1 = op1;
-    
+
     printf("Operando 2: ");
-    scanf(" %i", &op2); 
+    scanf(" %i", &op2);
     o2 = op2;
-    
+
 
     do{
       if (op2 % 2 == 1)
