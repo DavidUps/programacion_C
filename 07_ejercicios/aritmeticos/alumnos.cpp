@@ -2,18 +2,12 @@
 #include <stdlib.h>
 
 int main(){
-    int lista, fila, num=17;
+    int lista, fila;
 
     printf("Numero: ");
-    scanf(" %i\n", &lista);
-
-    do{
-        lista /num= fila;
-    }
-
-    while(lista > 17);
-
-    printf("%i", fila);
+    scanf(" %i", &lista);
+    fila = lista / 17 + 1;
+    printf("%i\n", fila);
 
     return EXIT_SUCCESS;
 }
