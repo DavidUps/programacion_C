@@ -4,7 +4,7 @@
 int main(){
     int decimal, reverse = 0;
 
-    printf("Decimal: ");
+   printf("Decimal: ");
     //escribir por teclado//
 
     scanf(" %i", &decimal);
@@ -15,16 +15,9 @@ int main(){
     // Mientras (while) decimal > 0
     printf("Binario: "); 
     do{
-      printf("%i", decimal % 2);
+      printf ("%i", decimal % 2);
       decimal /= 2;
     } while (decimal>0);
-    {
-      reverse = reverse * 10;
-      reverse = reverse + decimal%10;
-      decimal = decimal/10;
-    
-    }
-    ;
 
     printf("\n");
 

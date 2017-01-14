@@ -6,12 +6,13 @@ int main(){
 
     printf("meter número: ");
     scanf(" %i", &num);
-
+    printf("Resultado: ");
     do{
-        num = num / 2;
-        resto = num % 2;
+        printf("%i", num % 2);
+        num/= 2;
     }while(num > 0);
 
-    printf("Resultado %i", resto);
+    printf("\n");
+
     return EXIT_SUCCESS;
 }

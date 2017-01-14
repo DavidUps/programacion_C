@@ -7,7 +7,7 @@ int main(){
     printf("Numero: ");
     scanf(" %i", &lista);
     fila = lista / 17 + 1;
-    printf("%i\n", fila);
+    printf("fila %i columna %i \n", fila, fila);
 
     return EXIT_SUCCESS;
 }

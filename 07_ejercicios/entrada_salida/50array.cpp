@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    const char *nombre[] = {
+        "David",
+        "juan",
+        "paco",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        "nombre1",
+        NULL};
+    for(int i=0; nombre[i]!=NULL;i++)
+        printf("%i.- %s\n", i+1, nombre[i]);
+
+    return EXIT_SUCCESS;
+}
