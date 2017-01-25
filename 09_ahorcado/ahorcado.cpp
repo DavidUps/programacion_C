@@ -9,17 +9,12 @@ int main(){
     const char *palabra[]={
         "hola",
         "mala",
-        "informacion",
-        "pecora",
-        "surikato",
-        "telefono",
-        "espiritu",
-        NULL
+         NULL
     };
     const char *elegida;
     char adivina[15];
     int aleatorio;
-    char letra[1];
+    char letra;
     int vidas=55;
 
     system("clear");
@@ -42,18 +37,18 @@ int main(){
     do{
         printf("vidas: %i", vidas);
         printf("\n \t Letra: ");
-        scanf(" %c", letra);
+        scanf(" %c", &letra);
 
         for(int i=0; i<strlen(elegida);i++){
 
-            if(elegida[i]==letra[0]){
-                adivina[i]=letra[0];
+            if(elegida[i]==letra){
+                adivina[i]=letra;
 
             }
             printf("%c", adivina[i]);
         }vidas=vidas-1;
      }
-     while(vidas>=0);
+     while(elegida['\0']);
 
 
     return EXIT_SUCCESS;
