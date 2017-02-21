@@ -17,7 +17,7 @@ int resultado(int x){
     for(int grado=0; grado < x; grado++){
       do{
           potencia[grado]= x * grado;
-      }while (potencia[x+1]);
+      }while (potencia[x+1]=potencia[x+1]);
     }
 
     //Multiplica potencia * num
