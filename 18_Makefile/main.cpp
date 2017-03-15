@@ -1,11 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
-
-extern int suma(int, int);
+#include "aritmetica.h"
 
 int main(int argc, char *argv[]){
 
-    printf("2 + 3 = %i\n", suma(2,3));
+    printf("3 + 3 = %i\n", suma(3,3));
     return EXIT_SUCCESS;
 }
 
