@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]){
 
-    printf("3 + 3 = %i\n", suma(3,3));
+    printf("6 + 4 = %i\n", suma(6,4));
     return EXIT_SUCCESS;
 }
 

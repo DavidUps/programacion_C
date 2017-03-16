@@ -16,8 +16,8 @@
  * =====================================================================================
  */
 
-#ifndef __IMPRIME_H__
-#define __IMPRIME_H__
+#ifndef __ARITMETICA_H__
+#define __ARITMETICA_H__
 
 #ifdef __cplusplus
 extern "C" {
