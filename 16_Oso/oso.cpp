@@ -25,6 +25,27 @@ void tabla(char *tablero){
      printf("\n");
 }
 
+void tablero_resul(char *letra){
+
+      for(int i=1; i < 4; i++){
+           printf("%c\t", letra[i]);
+         }
+
+        printf("\n");
+
+         for(int i=4; i < 6; i++){
+           printf("%c\t", letra[i]);
+        }
+
+        printf("\n");
+
+        for(int i=6; i < 9; i++){
+            printf("%c\t", letra[i]);
+         }
+
+         printf("\n");
+}
+
 int main(int argc, char *argv[]){
     char tablero[N];
     char letra[N];
@@ -41,25 +62,8 @@ int main(int argc, char *argv[]){
         printf("\nLetra: ");
         scanf(" %s", &letra[num]);
         ++n;
-      for(int i=0; i < 3; i++){
-           printf("%c\t", tablero[i]);
-         }
-
-        printf("\n");
-
-         for(int i=3; i < 6; i++){
-           printf("%c\t", tablero[i]);
-        }
-
-        printf("\n");
-
-        for(int i=6; i < 9; i++){
-            printf("%c\t", tablero[i]);
-         }
-
-         printf("\n");
-
-
+        
+        tablero_resul(letra);
      }while(n>=0);
 
     return EXIT_SUCCESS;
