@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <strings.h>
 #include <stdlib.h>
 
 #define N 3
@@ -6,44 +7,64 @@
 int main(int argc, char *argv[]){
 
     char tablero[N][N];
-    int tablero_mostrar[N][N] = {{1,2,3},{4,5,6},{7,8,9}};
 
     char jugador1,
          jugador2;
 
-    int celda;
+    int fila,
+        columna;
+
     int turno_max = 9;
 
-    /* ASIGNAR X | O A CADA JUGADOR */
+    /*LIMPIAR MATRIZ TABLERO*/
 
-    printf("Jugador 1, que quieres ser x |o:");
-    scanf(" %c", &jugador1);
+    bzero(tablero, sizeof(tablero));
 
-    if(jugador1=='x'){
-        jugador2='o';
-    }else
-        jugador2='x';
+    /*BORRAR PANTALLA TITULO*/
 
-    printf("Jugador 1 es: %c \n", jugador1);
-    printf("Jugador 2 es: %c \n", jugador2);
+    system("clear");
+    system("toilet --gay -fpagga TRES EN RAYA!");
+
+    printf("\nJugador 1 es: X\n");
+    printf("Jugador 2 es: O\n");
 
     /* MOSTRAR TABLERO CON POSICIONES */
 
     for(int i=0; i<N; i++){
         for(int f=0; f<N; f++)
-            printf("%i \t", tablero_mostrar[i][f]);
-
-        printf("\n");
+            printf("\t %i \t",tablero[i][f]);
+        printf("\n\n");
     }
 
     /* TURNOS */
 
-    for(int turno=0; turno<4; turno++){
-    
-        printf("Turno jugador 1");
-        printf("¿En que celda lo quieres guardar?");
-        scanf(" %i", &celda);
-        /* Saber como calcular el numero de celda marcada por el usuario para meter lo que contenca j1/j2 */
+    for(int turno=0; turno<2; turno++){
+        printf("Turno jugador 1\n");
+        printf("¿En que fila y columna lo quieres guardar?\n");
+        printf("Fila: ");
+        scanf(" %i", &fila);
+        printf("\nColumna: ");
+        scanf(" %i", &columna);
+        tablero[fila][columna]='X';
+        for(int i=0; i<N; i++){
+            for(int f=0; f<N; f++)
+                printf("%i \t", tablero[i][f]);
+            printf("\n");
+        }
+
+        printf("Turno jugador 2\n");
+        printf("¿En que fila y columna lo quieres guardar?\n");
+        printf("Fila: ");
+        scanf(" %i", &fila);
+        printf("\nColumna: ");
+        scanf(" %i", &columna);
+        tablero[fila][columna]='O';
+        for(int i=0; i<N; i++){
+            for(int f=0; f<N; f++)
+                printf("%i \t", tablero[i][f]);
+            printf("\n");
+        }
+
     }
 
     return EXIT_SUCCESS;
