@@ -6,12 +6,12 @@
 void invertir(char nombre[N], int n){
     
     char *ini = nombre;
-    char *fin = nombre + n;
+    char *fin = nombre;
     char aux;
 
-    for(;ini < fin; ini++, fin--){
+    for(;ini < fin; ++ini, --fin){
         aux  = *ini;
-        *ini = *fin;
+        *ini = *fin + n -2;
         *fin = aux;
     }
 }
@@ -22,8 +22,6 @@ int main(int argc, char *argv[]){
 
     printf("%s\n", nombre);
 
-    invertir(nombre,N);
-
-    printf("%s\n", nombre);
+    printf("%s\n", invertir(nombre,N));
     return EXIT_SUCCESS;
 }

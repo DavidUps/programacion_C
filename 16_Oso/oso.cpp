@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #define N 9
+
 void tabla(char *tablero){
 
     for(int i=1; i < 4; i++){
@@ -62,7 +64,6 @@ int main(int argc, char *argv[]){
         printf("\nLetra: ");
         scanf(" %s", &letra[num]);
         ++n;
-        
         tablero_resul(letra);
      }while(n>=0);
 
