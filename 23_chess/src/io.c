@@ -23,12 +23,17 @@ error_ocurred ()
 }
 
 int
-repeat (void, num)
+repeat (void)
 {
-  if(num!=0)
-      num 1;
+  char valor;
+  int num;
+
+  printf("¿Quieres repetir, s o n?");
+  scanf(" %s", &valor);
+  if(valor== 's')
+      num = 1;
   else
-      num 0;
+      num = 0;
   return num;
 }
 
@@ -78,7 +83,10 @@ load (const char *filename, char storage[SIZE][SIZE])
 void
 dump (char board[SIZE][SIZE])
 {
-  ;
+    for(int f=0; f<SIZE; f++)
+        for(int col=0; col<SIZE;col++)
+            printf("%c", board[f][col]);
+    printf("\n");
 }
 
 void
@@ -88,6 +96,4 @@ ask_coordinates (int *y, int *x, const char *name)
     scanf(" %i", y);
     printf("Dame la columna: ");
     scanf(" %i", x);
-    printf("\n ¿Quieres hacerlo de nuevo?(0 si, distinto no)");
-    scanf(" %i", &num);
 }

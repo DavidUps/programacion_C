@@ -13,7 +13,6 @@ main (int argc, char *argv[])
 {
   char chess_board[SIZE][SIZE];
   int row, col;
-  int num;
 
   do
     {
@@ -26,7 +25,7 @@ main (int argc, char *argv[])
       while (!is_empty (row, col, chess_board));
       tower_check (row, col, chess_board);
     }
-  while (repeat(num));
+  while (repeat());
 
 
   return EXIT_SUCCESS;
