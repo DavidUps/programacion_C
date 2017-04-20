@@ -83,10 +83,14 @@ load (const char *filename, char storage[SIZE][SIZE])
 void
 dump (char board[SIZE][SIZE])
 {
-    for(int f=0; f<SIZE; f++)
-        for(int col=0; col<SIZE;col++)
-            printf("%c", board[f][col]);
-    printf("\n");
+    int f=0;
+    int c=0;
+
+    for(;f<SIZE; f++){
+        printf("\n");
+        for(;c<SIZE; c++)
+            printf("%c", board[f][c]);
+    }
 }
 
 void
