@@ -83,15 +83,16 @@ load (const char *filename, char storage[SIZE][SIZE])
 void
 dump (char board[SIZE][SIZE])
 {
-    int f=0;
-    int c=0;
+    int f,c;
 
-    for(;f<SIZE; f++){
-        printf("\n");
-        for(;c<SIZE; c++)
+    for(f=0; f<SIZE; f++){
+        for(c=0; c<SIZE; c++)
             printf("%c", board[f][c]);
+        printf("\n");
     }
 }
+
+
 
 void
 ask_coordinates (int *y, int *x, const char *name)
