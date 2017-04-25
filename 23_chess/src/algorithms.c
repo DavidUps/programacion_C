@@ -79,3 +79,32 @@ alfil_check (int row, int col, char board[SIZE][SIZE])
   check_direction(row, col, dir, board);
 
 }
+
+int
+horse_check (int row, int col, char board[SIZE][SIZE])
+{
+  //int offs;
+  struct TVector dir;
+
+  prepare_win (OUT_LIN);
+  printf (BOLD_ON
+	  "\tCOMPROBANDO EL CABALLO\n" "\t====================\n\n" BOLD_OFF);
+
+  // Convertir a un array a punteros a dirección
+  dir.x =  2;
+  dir.y =  1;
+  check_direction(row, col, dir, board);
+
+  dir.x =  2;
+  dir.y = -1;
+  check_direction(row, col, dir, board);
+
+  dir.x = -2;
+  dir.y =  1;
+  check_direction(row, col, dir, board);
+
+  dir.x = -2;
+  dir.y = -1;
+  check_direction(row, col, dir, board);
+
+}

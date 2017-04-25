@@ -19,6 +19,7 @@ extern "C"
 int is_empty    (int row, int col, char board[SIZE][SIZE]);
 int tower_check (int row, int col, char board[SIZE][SIZE]);
 int alfil_check (int row, int col, char board[SIZE][SIZE]);
+int horse_check (int row, int col, char board[SIZE][SIZE]);
 
 #ifdef __cplusplus
 }

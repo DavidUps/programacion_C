@@ -33,6 +33,14 @@ main (int argc, char *argv[])
 	     !is_empty (row, col, chess_board));
       print_piece ('A', row, col);
       alfil_check (row, col, chess_board);
+      do
+	{
+	  ask_coordinates (&row, &col, "Caballo");
+	}
+      while (!good_coordinates (row, col) ||
+	     !is_empty (row, col, chess_board));
+      print_piece ('C', row, col);
+      horse_check (row, col, chess_board);
 
     }
   while (repeat ());
