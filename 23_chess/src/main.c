@@ -3,9 +3,8 @@
 
 #include "general.h"
 #include "io.h"
+#include "algorithms.h"
 
-int is_empty (int row, int col, char board[SIZE][SIZE]);
-int tower_check (int row, int col, char board[SIZE][SIZE]);
 
 int
 main (int argc, char *argv[])
@@ -16,45 +15,30 @@ main (int argc, char *argv[])
   do
     {
       load (BOARD_FN, chess_board);
+      title ("chess");
       dump (chess_board);
       do
 	{
-	  ask_coordinates (&row, &col, "torre");
+	  ask_coordinates (&row, &col, "Torre");
 	}
-      while (!is_empty (row, col, chess_board));
+      while (!good_coordinates (row, col) ||
+	     !is_empty (row, col, chess_board));
+      print_piece ('T', row, col);
       tower_check (row, col, chess_board);
-    }
-  while (repeat());
+      do
+	{
+	  ask_coordinates (&row, &col, "ALfil");
+	}
+      while (!good_coordinates (row, col) ||
+	     !is_empty (row, col, chess_board));
+      print_piece ('A', row, col);
+      alfil_check (row, col, chess_board);
 
+    }
+  while (repeat ());
+
+  MOVE(EXIT_LIN, 1);
 
   return EXIT_SUCCESS;
 }
 
-int
-is_empty (int row, int col, char board[SIZE][SIZE])
-{
-    if(board[row][col]==' '){
-       printf("Puedes Ponerla");
-    }
-    printf("Esta ocupada");
-  ;
-}
-
-int
-tower_check (int row, int col, char board[SIZE][SIZE])
-{
-      int f,c;
-      int retorno;
-      printf("%i", col);
-      printf("%i", row);
-      for (c=0; c<SIZE;c++){
-          if(board[f][c]!=' ')
-              retorno=1;
-      }
-      for(f=0; f<SIZE;f++){
-          if(board[f][c]!=' ')
-              retorno=1;
-      }
-      if(retorno=1)
-          printf("Se Come Una Ficha\n");
-}
