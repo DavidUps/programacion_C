@@ -1,22 +1,20 @@
-CC = cc
+# Como un define para no escribirlo tantas veces.
+DEPS = main.cpp
 
-CFLAGS = -g
-LDLIBS = 
+main: main.o io.o
+	g++ main.o io.o -o oso
 
-DEPS = $(wildcard *.h)
-OBJS = $(patsubst %.o, %.cpp, $(wildcard *.cpp))
+# Si main.o es más antiguo que main.cpp compila.
+main.o: main.cpp $(DEPS)
+	g++ -c main.cpp
 
-EXE  = oso
+# Si suma.o es más antiguo que suma.cpp compila.
+io.o: io.cpp $(DEPS)
+	g++ -c io.cpp
 
-all: $(EXE) clean
-
-$(EXE): $(OBJS) $(DEPS)
-	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDLIBS)
-
-%.o: %.c $(DEPS)
-	$(CC) $(CFLAGS) -c $<
-
+#No mires el tiempo si te dice make clean, lo haces.
 .PHONY: clean
 
 clean:
+	#$(RM) Se pone para que borre tanto Windows como Linux.
 	$(RM) *.o
