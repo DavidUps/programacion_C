@@ -17,5 +17,5 @@ suma.o: suma.cpp $(DEPS)
 .PHONY: clean
 
 clean:
-	#$(RM) Se pone para que borre tanto Windows como Linux.
+	$(RM) 
 	$(RM) *.o
