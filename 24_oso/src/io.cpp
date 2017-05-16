@@ -48,3 +48,6 @@ bool oso(char letra){
     if(letra!='o' && 's')
         return true;
 }
+int checkoso(char tablero[SIZE][SIZE], int chocolate){
+;
+}

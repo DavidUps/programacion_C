@@ -11,16 +11,39 @@ int main(int argc, char *argv[]){
 
     char letra;
 
+    char respuesta;
+
+    int chocolate=0;
+
     int j1point,
         j2point;
 
     system("clear");
     do{
+        system("clear");
         loadnumboard(tablero_num);
         loadboard(tablero);
 
         insertj1(tablero, letra);
+        printf("Jugador 1 has hecho oso (s/n): ");
+        scanf(" %c", &respuesta);
+            if(respuesta=='s'){
+                checkoso(tablero,chocolate);
+                if(chocolate==1){
+                    j1point++;
+                }
+            }
+        printf("PRUEBA");
         insertj2(tablero, letra);
+        printf("Jugador 2 has hecho oso (s/n): ");
+        scanf(" %c", &respuesta);
+            if(respuesta=='s'){
+                checkoso(tablero,chocolate);
+                if(chocolate==1){
+                    j1point++;
+                }
+            }
+
     }while(oso(letra));
     puntos(j1point, j2point);
 
