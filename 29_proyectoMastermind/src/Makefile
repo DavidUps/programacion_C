@@ -1,8 +1,8 @@
 # Como un define para no escribirlo tantas veces.
-DEPS = main.cpp
+DEPS = io.h
 
 main: main.o io.o
-	g++ main.o io.o -o oso
+	g++ main.o io.o -o Mastermind
 
 # Si main.o es más antiguo que main.cpp compila.
 main.o: main.cpp $(DEPS)

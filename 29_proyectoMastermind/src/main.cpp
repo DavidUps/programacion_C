@@ -1,21 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "io.h"
+
+#define F 4
+#define C 10
 
 int main(int argc, char *argv[]){
 
-    char chess[4][10];
-    char resul[4];
-    char check[2];
+    char tablero[F][C];
+    char colorposicion[2][C];
+    char adivinar[F];
+    bool comprobar;
 
-    printcheck(chess);
-    printresul(resul);
-    isnertresul(resul);
-    for(int i=0;i>11;i++){
-        for(i>11){
-            insetchess(chess);
-            printcheck(chess);
-        }while(false);
-    }
+    pintarTableros(tablero, colorposicion,adivinar);
+    datosAdivinar(adivinar);
+    do{
+        datosTablero(tablero);
+        comprobarCP(tablero, colorposicion, adivinar);
+    }while(comprobarWhile(comprobar));
 
     return EXIT_SUCCESS;
 }
