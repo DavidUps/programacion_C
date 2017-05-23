@@ -9,7 +9,7 @@ extern "C"
 #endif
 
     extern void pintarTableros(char tablero[F][C], char colorposicion[2][C], char adivinar[C]);
-    extern char datosAdivinar(char adivinar[C]);
+    extern void datosAdivinar(char adivinar[C]);
     extern char datosTablero(char tablero[F][C]);
     extern char comprobarCP(char tablero[F][C], char colorposicion[2][C], char adivinar[C]);
     extern bool comprobarWhile(bool comprobar);

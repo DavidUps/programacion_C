@@ -12,10 +12,11 @@ int main(int argc, char *argv[]){
     char adivinar[F];
     bool comprobar;
 
-    pintarTableros(tablero, colorposicion,adivinar);
+    /* pintarTableros(tablero, colorposicion,adivinar);*/
     datosAdivinar(adivinar);
     do{
         datosTablero(tablero);
+        pintarTableros(tablero, colorposicion,adivinar);
         comprobarCP(tablero, colorposicion, adivinar);
     }while(comprobarWhile(comprobar));
 
