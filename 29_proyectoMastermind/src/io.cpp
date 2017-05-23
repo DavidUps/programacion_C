@@ -34,15 +34,16 @@ char datosTablero(char tablero[F][C]){
 
     printf("Meter datos: [Azul-a | Rojo-r | Naranja-n | Marron-m | Blanco-b] \n");
     for(int f=0; f<4; f++){
-        printf("Color %i",f);
+        printf("\n Color %i: ",f);
         scanf(" %c", &tablero[0][f]);
     }
+    system("clear");
 }
 
 char comprobarCP(char tablero[F][C], char colorposicion[2][C], char adivinar[C]){
     ;
 }
 
-bool comprobarWhile(bool *comprobar){
+bool comprobarWhile(bool comprobar){
     ;
 }
