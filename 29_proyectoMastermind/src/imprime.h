@@ -9,10 +9,10 @@ extern "C"
 {
 #endif
 
-    extern void saluda(char nombre[N]);
-    extern void insertar(int num[F]);
-    extern void imprime(int num[F], char adv_fal[F]);
-    extern char comprobar(int num[F], int adv[F], char adv_fal[F]);
+    void saluda(char nombre[]);
+    void insertar(char num[]);
+    void imprime(char num[], char adv_fal[]);
+    void comprobar(char num[], char adv[], char adv_fal[]);
 
 #ifdef __cplusplus
 }

@@ -13,37 +13,23 @@ void saluda(char nombre[N]){
     printf("Bueno %s, texto para insertar numeros|colores", nombre);
 }
 
-void insertar(int num[F]){
-    for(int i=0; i<F; i++){
-        printf("\n Número %i: ", i);
-        scanf(" %i", &num[i]);
-    }
+void insertar(char num[F]){
+    printf("\n Intento : ");
+    scanf(" %4[1-4]", num);
 }
 
-char comprobar(int num[F],int adv[F], char adv_fal[F]){
+void comprobar(char num[F], char adv[F], char adv_fal[F]){
 
-    for(int i=0; i<F; i++){
+    for(int i=0; i<F; i++)
         for(int a=0; a<F; a++){
-            if(num[i]==adv[a] && i==a){
+            if(num[i]==adv[a] && i==a)
                adv_fal[i]='p';
-             }if(num[i]==adv[a] && i!=a){
+            if(num[i]==adv[a] && i!=a)
                  adv_fal[i]='c';
-             }
         }
-    }
 }
 
-void imprime(int num[F], char adv_fal[F]){
-
-    for(int i=0; i<F;i++){
-        printf("%c", adv_fal[i]);
-    }
-
-    printf("\n");
-
-    for(int i=0; i<F; i++){
-        printf("%i", num[i]);
-    }
-
-    printf("\n");
+void imprime(char num[], char adv_fal[]){
+    printf("%s\n", adv_fal);
+    printf("%s\n", num);
 }
