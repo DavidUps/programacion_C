@@ -26,7 +26,7 @@ int main(int argc, char *argv[]){
 
     saluda(nombre);
     insertar(num);
-    comprobar(num, adv, adv_fal, p, c);
+    comprobar(num, adv, adv_fal, &p, &c);
     imprime(num, adv_fal, p, c);
 
     return EXIT_SUCCESS;
