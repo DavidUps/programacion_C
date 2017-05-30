@@ -11,6 +11,9 @@ int main(int argc, char *argv[]){
     char num[F+1],
          adv[F+1];
 
+    int c=0,
+        p=0;
+
     adv[F] = num[F] = '\0';
 
     srand(time(NULL));
@@ -23,8 +26,8 @@ int main(int argc, char *argv[]){
 
     saluda(nombre);
     insertar(num);
-    comprobar(num, adv, adv_fal);
-    imprime(num, adv_fal);
+    comprobar(num, adv, adv_fal, p, c);
+    imprime(num, adv_fal, p, c);
 
     return EXIT_SUCCESS;
 }

@@ -11,8 +11,8 @@ extern "C"
 
     void saluda(char nombre[]);
     void insertar(char num[]);
-    void imprime(char num[], char adv_fal[]);
-    void comprobar(char num[], char adv[], char adv_fal[]);
+    void imprime(char num[], char adv_fal[], int p, int c);
+    void comprobar(char num[], char adv[], char adv_fal[], int p, int c);
 
 #ifdef __cplusplus
 }
