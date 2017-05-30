@@ -32,13 +32,13 @@ void comprobar(char num[F], char adv[F], char adv_fal[F], int *p, int *c){
     for(int i=0; i<F; i++)
         for(int a=0; a<F; a++){
             if(num2[i]==adv2[a] && i==a){
-               *p++;
+               (*p)++;
                adv_fal[i]='p';
                num2[i]='*';
                adv2[i]='x';
             }
             if(num2[i]==adv2[a] && i!=a){
-                *c++;
+                (*c)++;
                 adv_fal[i]='c';
                 num2[i]='*';
                 adv2[i]='x';
