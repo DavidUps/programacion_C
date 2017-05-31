@@ -21,29 +21,44 @@ void insertar(char num[F]){
 void comprobar(char num[F], char adv[F], char adv_fal[F], int *p, int *c){
 
     char num2[F];
-        for(int i=0; i<F; i++){
-            num2[i]=num[i];
-        }
+
+    for(int i=0; i<F; i++){
+        num2[i]=num[i];
+    }
+
     char adv2[F];
-        for(int i=0; i<F; i++){
-            adv2[i]=adv[i];
-        }
+
+    for(int i=0; i<F; i++){
+        adv2[i]=adv[i];
+    }
 
     for(int i=0; i<F; i++)
         for(int a=0; a<F; a++){
-            if(num2[i]==adv2[a] && i==a){
-               (*p)++;
-               adv_fal[i]='p';
-               num2[i]='*';
-               adv2[i]='x';
-            }
-            if(num2[i]==adv2[a] && i!=a){
-                (*c)++;
+            if(num2[i]==adv[a] && i!=a){
                 adv_fal[i]='c';
-                num2[i]='*';
-                adv2[i]='x';
+                adv2[i]='*';
             }
         }
+
+    for(int i=0; i<F; i++){
+         adv2[i]=adv[i];
+    }
+
+    for(int i=0; i<F; i++ )
+        for(int a=0; a<F; a++){
+            if(num2[i]==adv[a] && i==a){
+               adv_fal[i]='p';
+               adv2[i]='*';
+            }
+        }
+
+    for(int i=0; i<F; i++){
+        if(adv_fal[i]=='p')
+            (*p)++;
+        if(adv_fal[i]=='c')
+            (*c)++;
+    }
+
 }
 
 void imprime(char num[], char adv_fal[], int p, int c){
